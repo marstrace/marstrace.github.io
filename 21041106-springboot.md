@@ -1,3 +1,12 @@
+<!--title: SpringBoot整合其他技术
+description: SpringBoot整合 Mybatis | Junit | Spring Data Jpa | Redis | Mail | Thymeleaf
+firstPicture: http://static-blog.top234.top/image/1.png
+status: 1
+priority: 6
+=top234=-->
+
+
+
 ## 1 SpringBoot整合Mybatis
 
 ### 1.1 添加Mybatis的起步依赖
@@ -406,8 +415,11 @@ spring.datasource.password=password
 
 #JPA Configuration:
 spring.jpa.database=MySQL
+#打印SQL
 spring.jpa.show-sql=true
+#自动生成表
 spring.jpa.generate-ddl=true
+#自动更新字段
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
 ```
@@ -1400,9 +1412,9 @@ this is scheduler task runing  6
 
 QQ邮箱->设置->账户->POP3/SMTP服务:开启服务后会获得QQ的授权码.
 
-![1559628130602](https://img-blog.csdnimg.cn/img_convert/a9b2ad1268ff7493c8f6cb0f5184c9a6.png)
+![1559628130602](pic/1559628130602.png)
 
-![1559628344501](https://img-blog.csdnimg.cn/img_convert/1e07f77d4062b1a8812ac988cad08728.png)
+![1559628344501](pic/1559628344501.png)
 
 ### 6.3 Mail配置文件
 
@@ -1768,9 +1780,9 @@ public String memberShow(Model model) {
 
 上面给出了两种展现方式，一种是通过${属性}，另外一种是通过*{属性}。*
 
-**关于“${属性}”和“{属性}”的区别？**
+**关于“${属性}”和“*{属性}”的区别？**
 
-${属性}访问完整信息，而{属性}访问指定对象中的属性内容， 如果访问的只是普通的内容两者没有区别；
+${属性}访问完整信息，而*{属性}访问指定对象中的属性内容， 如果访问的只是普通的内容两者没有区别；
 
 #### 7.2.4 数据逻辑处理
 

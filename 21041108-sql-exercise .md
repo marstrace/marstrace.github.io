@@ -1,4 +1,13 @@
-# 34道sql练习题
+<!--title: 34道sql练习题
+description: 34道sql练习题
+firstPicture: http://static-blog.top234.top/image/1.png
+status: 1
+priority: 6
+=top234=-->
+
+
+
+-----------------------
 
 ```mysql
 1、取得每个部门最高薪水的人员名称

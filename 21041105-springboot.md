@@ -1,12 +1,22 @@
+<!--title: SpringBoot 基础
+description: SpringBoot不是对Spring功能上的增强，而是提供了一种快速使用Spring的方式
+type: 笔记
+firstPicture: http://static-blog.top234.top/image/1.png
+status: 1
+priority: 6
+=top234=-->
+
+
+
 # 一、SpringBoot简介
 
-## 1.1原有Spring优缺点分析
+## 1.1 原有Spring优缺点分析
 
 ### 1.1.1 Spring的优点分析
 
 Spring是Java企业版（Java Enterprise Edition，JEE，也称J2EE）的轻量级代替品。无需开发重量级的Enterprise JavaBean（EJB），Spring为企业级Java开发提供了一种相对简单的方法，通过依赖注入和面向切面编程，用简单的Java对象（Plain Old Java Object，POJO）实现了EJB的功能。
 
-### 1.1.2Spring的缺点分析
+### 1.1.2 Spring的缺点分析
 
 虽然Spring的组件代码是轻量级的，但它的配置却是重量级的。一开始，Spring用XML配置，而且是很多XML配      置。Spring  2.5引入了基于注解的组件扫描，这消除了大量针对应用程序自身组件的显式XML配置。Spring  3.0引入了基于Java的配置，这是一种类型安全的可重构配置方式，可以代替XML。
 
@@ -14,13 +24,13 @@ Spring是Java企业版（Java Enterprise Edition，JEE，也称J2EE）的轻量�
 
 除此之外，项目的依赖管理也是一件耗时耗力的事情。在环境搭建时，需要分析要导入哪些库的坐标，而且还需要   分析导入与之有依赖关系的其他库的坐标，一旦选错了依赖的版本，随之而来的不兼容问题就会严重阻碍项目的开   发进度。
 
-## 1.2SpringBoot的概述
+## 1.2 SpringBoot的概述
 
-### 1.2.1SpringBoot解决上述Spring的缺点
+### 1.2.1 SpringBoot解决上述Spring的缺点
 
 SpringBoot对上述Spring的缺点进行的改善和优化，基于**约定优于配置**的思想，可以让开发人员不必在配置与逻辑业务之间进行思维的切换，全身心的投入到逻辑业务的代码编写中，从而大大提高了开发的效率，一定程度上缩短了项目周期。
 
-### 1.2.2SpringBoot的特点
+### 1.2.2 SpringBoot的特点
 
 为基于Spring的开发提供更快的入门体验
 
@@ -30,7 +40,7 @@ SpringBoot对上述Spring的缺点进行的改善和优化，基于**约定优�
 
 **SpringBoot不是对Spring功能上的增强，而是提供了一种快速使用Spring的方式**
 
-### 1.2.3SpringBoot的核心功能
+### 1.2.3 SpringBoot的核心功能
 
 起步依赖：
 
@@ -48,15 +58,15 @@ Spring Boot的自动配置是一个运行时（更准确地说，是应用程序
 
 # 二、SpringBoot快速入门
 
-## 2.1代码实现
+## 2.1 代码实现
 
-### 2.1.1创建Maven工程
+### 2.1.1 创建Maven工程
 
 使用idea工具创建一个maven工程，该工程为普通的java工程即可
 
 ![21040401](pic/21040401.png)
 
-### 2.1.2添加SpringBoot的起步依赖
+### 2.1.2 添加SpringBoot的起步依赖
 
 SpringBoot要求，项目要继承SpringBoot的起步依赖spring-boot-starter-parent
 
@@ -98,7 +108,7 @@ public class MySpringBootApplication {
 
 ```
 
-### 2.1.4编写Controller
+### 2.1.4 编写Controller
 
 在引导类MySpringBootApplication同级包或者子级包中创建HelloController
 
@@ -118,7 +128,7 @@ public class HelloController {
 }
 ```
 
-### 2.1.5测试
+### 2.1.5 测试
 
 ```shell
 运行MySpringBootApplication类的main方法:
@@ -137,13 +147,13 @@ public class HelloController {
 
 url地址为：http://localhost:8080/quick
 
-## 2.2快速入门解析
+## 2.2 快速入门解析
 
-### 2.2.2SpringBoot代码解析
+### 2.2.2S pringBoot代码解析
 
 @SpringBootApplication：标注SpringBoot的启动类，该注解具备多种功能（后面详细剖析） SpringApplication.run(MySpringBootApplication.class) 代表运行SpringBoot的启动类，参数为SpringBoot 启动类的字节码对象
 
-### 2.2.3SpringBoot工程热部署（spring-boot-devtools）
+### 2.2.3S pringBoot工程热部署（spring-boot-devtools）
 
 我们在开发中反复修改类、页面等资源，每次修改后都是需要重新启动才生效，这样每次启动都很麻烦，浪费了大   量的时间，我们可以在修改代码后不重启就能生效，在pom.xml  中添加如下配置就可以实现这样的功能，我们称之为热部署。
 
@@ -178,7 +188,7 @@ Intellij  IEDA默认情况下不会自动编译，需要对IDEA进行自动编�
 
 # 三、SpringBoot原理分析
 
-### 3.1.1分析spring-boot-starter-parent
+### 3.1.1 分析spring-boot-starter-parent
 
 spring-boot-starter-parent的pom.xml配置如下（只摘抄了部分重点配置）： 
 
@@ -299,7 +309,7 @@ spring-boot-starter-parent的父工程spring-boot-starter-dependencies的pom.xml
 
 所以起步依赖的作用就是进行依赖的传递。
 
-### 3.1.2分析spring-boot-starter-web
+### 3.1.2 分析spring-boot-starter-web
 
 spring-boot-starter-web的pom.xml配置如下（只摘抄了部分重点配置）：
 
@@ -526,15 +536,15 @@ public class ServerProperties {
 
 # 四、SpringBoot的配置文件
 
-## 4.1SpringBoot配置文件类型
+## 4.1 SpringBoot配置文件类型
 
-### 4.1.1SpringBoot配置文件类型和作用
+### 4.1.1 SpringBoot配置文件类型和作用
 
 SpringBoot是基于约定的，很多配置都有默认值，但如果想使用自己的配置替换默认配置，可以使用**application.properties**或者**application.yml（application.yaml）**进行配置。
 
 SpringBoot默认会从Resources目录下加载application.properties或application.yml（application.yaml）文件
 
-### 4.1.2application.yml配置文件
+### 4.1.2 application.yml配置文件
 
 #### 4.1.2.1 yml配置文件简介
 
@@ -542,7 +552,7 @@ YML文件格式是YAML (YAML Aint  Markup Language)编写的文件格式，YAML�
 
 YML文件的扩展名可以使用.yml或者.yaml。
 
-#### 4.1.2.2yml配置文件的语法
+#### 4.1.2.2 yml配置文件的语法
 
 ##### **4.1.2.2.1** 配置普通数据
 
@@ -584,11 +594,11 @@ person: {name: haohao,age: 31,addr: beijing}
 
  注意：key1前面的空格个数不限定，在yml语法中，相同缩进代表同一个级别
 
-##### 4.1.2.2.2配置Map数据
+##### 4.1.2.2.2 配置Map数据
 
 ##### 与配置对象的语法相同
 
-##### 4.1.2.2.3配置数组（List、Set）数据语法：
+##### 4.1.2.2.3 配置数组（List、Set）数据语法：
 
 key:
 
@@ -627,7 +637,7 @@ student:
 
  注意：value1与之间的 - 之间存在一个空格
 
-### 4.1.3SpringBoot配置信息的查询
+### 4.1.3 SpringBoot配置信息的查询
 
 上面提及过，SpringBoot的配置文件，主要的目的就是对配置信息进行修改的，但在配置时的key从哪里去查询    呢？我们可以查阅SpringBoot的官方文档
 
@@ -694,9 +704,9 @@ server:
 		context-path: /demo
 ```
 
-## 4.2配置文件与配置类的属性映射方式
+## 4.2 配置文件与配置类的属性映射方式
 
-### 4.2.1使用注解@Value映射
+### 4.2.1 使用注解@Value映射
 
 我们可以通过@Value注解将配置文件中的值映射到一个Spring管理的Bean的字段上 例如：
 
