@@ -1585,7 +1585,7 @@ public class client {
 
 #### 6.4.6 发送基于thymeleaf模板的邮件
 
-1）pom中导入thymeleaf的包
+1.pom中导入thymeleaf的包
 
 ```xml
 <dependency>
@@ -1594,7 +1594,7 @@ public class client {
 </dependency>
 ```
 
-2）在resorces/templates下创建emailTemplate.html
+2.在resorces/templates下创建emailTemplate.html
 
 ```html
 <!DOCTYPE html>
@@ -1610,7 +1610,7 @@ public class client {
 </html>
 ```
 
-3）解析模板并发送
+3.解析模板并发送
 
 ```java
 @Test
@@ -1890,8 +1890,7 @@ public String list(Model model) {
 </body>
 ```
 
-1. map类型数据遍历
-
+2.map类型数据遍历
 ```html
 <body>
     <table>
@@ -1909,8 +1908,7 @@ public String list(Model model) {
 </body>
 ```
 
-2.list类型数据遍历
-
+3.list类型数据遍历
 ```html
 <body>
     <table>
@@ -1934,19 +1932,19 @@ public String list(Model model) {
 - th:replace
 - th:include
 
-1. 新建需要被引入的页面文件，路径为"src/main/view/templates/commons/footer.html"
+1.新建需要被引入的页面文件，路径为"src/main/view/templates/commons/footer.html"
 
-   ```html
-   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-   <footer th:fragment="companyInfo">
-       <p>设为首页 ©2018 SpringBoot 使用<span th:text="${projectName}"/>前必读
-           意见反馈 京ICP证030173号 </p>
-   </footer>
-   ```
+```html
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<footer th:fragment="companyInfo">
+<p>设为首页 ©2018 SpringBoot 使用<span th:text="${projectName}"/>前必读
+意见反馈 京ICP证030173号 </p>
+</footer>
+```
 
  可以看到页面当中还存在一个变量projectName，这个变量的值可以在引入页面中通过`th:with="projectName=百度"`传过来。
 
-2. 引入页面中只需要添加如下代码即可
+2.引入页面中只需要添加如下代码即可
 
 ```html
 <div th:include="@{/commons/footer} :: companyInfo" th:with="projectName=百度"/>
