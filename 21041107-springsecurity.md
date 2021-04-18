@@ -554,7 +554,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 3.  **persistent_logins表**
 
-```
+```markdown
 persistent_logins表是spring security用来存储用户token的，可以手动创建，也可以在配置文件中开启自动建表功能
 ```
 
