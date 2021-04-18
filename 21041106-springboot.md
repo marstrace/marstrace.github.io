@@ -1316,7 +1316,7 @@ public class redistTest {
 }
 ```
 
-## 5	SpringBoot整合quartz 定时任务
+## 5 SpringBoot整合quartz 定时任务
 
 ### 5.1 启动类启用定时
 
@@ -1393,7 +1393,7 @@ this is scheduler task runing  6
 - `@Scheduled(fixedDelay = 6000)` ：上一次执行完毕时间点之后6秒再执行
 - `@Scheduled(initialDelay=1000, fixedRate=6000)` ：第一次延迟1秒后执行，之后按fixedRate的规则每6秒执行一次
 
-## 6	SpringBoot 整合mail邮件
+## 6 SpringBoot整合mail邮件
 
 ### 6.1 添加mail的起步依赖
 
@@ -1638,7 +1638,7 @@ public void sendTemplateMail() {
 }
 ```
 
-## 7	SpringBoot 整合 thymeleaf静态化模板
+## 7 SpringBoot整合Thymeleaf静态化模板
 
 ### 7.1 添加Thymeleaf依赖
 
