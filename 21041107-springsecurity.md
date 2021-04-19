@@ -597,7 +597,7 @@ protected void configure(HttpSecurity http) throws Exception {              			h
 }
 ```
 
-3. **注意：**当开启了CSRF防护时，3.5节的退出登录功能不能使用\<a\>标签实现，需要使用表单提交，并包含**”_csrf“**字段
+3. **注意：** 当开启了CSRF防护时，3.5节的退出登录功能不能使用\<a\>标签实现，需要使用表单提交，并包含 **”_csrf“** 字段
 
 ```html
 <form method="post" th:action="@{/user/logout}">
