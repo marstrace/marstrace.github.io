@@ -360,7 +360,6 @@ public final class SpringRunner extends SpringJUnit4ClassRunner
 ## 3 SpringBoot整合Spring Data JPA
 
 ### JPA注解介绍：
-
 1. **@Entity** ：修饰实体类，指明该类将映射到指定的数据表，例如：Customer 类默认的数据表名为 customer
 2. **@Table** ：当实体类与映射的数据库表名不同名时需要使用 @Table 注解，该注解与 @Entity 注解并列使用，使用其 **name 属性**指明数据库的表名
 3. **@Id** ：标识该属性为**主键**，**一般标注在该属性的 getter 方法上**
