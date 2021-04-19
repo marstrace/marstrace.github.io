@@ -362,24 +362,16 @@ public final class SpringRunner extends SpringJUnit4ClassRunner
 ### JPA注解介绍：
 
 1. **@Entity** ：修饰实体类，指明该类将映射到指定的数据表，例如：Customer 类默认的数据表名为 customer
-
 2. **@Table** ：当实体类与映射的数据库表名不同名时需要使用 @Table 注解，该注解与 @Entity 注解并列使用，使用其 **name 属性**指明数据库的表名
-
 3. **@Id** ：标识该属性为**主键**，**一般标注在该属性的 getter 方法上**
-
 4. **@GeneratedValue** ：标注**主键的生成策略**，通过其 **strategy 属性**。通常与 @Id 注解一起使用。默认情况下 JPA 会自动选择一个最适合底层数据库的主键生成策略，MySQL 默认为 AUTO，常用策略有：
-
    > IDENTITY：采用数据库ID自增长的方式来自增主键字段，Oracle 不支持这种方式；
    >  **AUTO**： **JPA自动选择合适的策略，是默认选项；**
    >  SEQUENCE：通过序列产生主键，通过 @SequenceGenerator 注解指定序列名，MySql 不支持这种方式
    >  TABLE：通过表产生主键，框架借由表模拟序列产生主键，使用该策略可以使应用更易于数据库移植
-
 5. **@Basic** ：用于**没有任何标注的 getXxx() 方法**，默认即为 @Basic，所以若一个 getter 方法无任何注解，可以使用 @Basic 注解，也可以不使用
-
 6. **@Column** ：当**实体的属性与其映射的数据表的列不同名时使用**，一般用于 getter 方法上。其 **name 属性用来指明此属性在数据表中对应的列名**；**unique 属性**指明**是否为唯一约束**；**nullable 属性**用来**指明是否可以为空，false 为不能为空**；**length 属性**指明**此列的长度**。
-
 7. **@Transient** ：**标注此注解后在创建数据表的时候将会忽略该属性**  Customer 类并没有 info 这个属性，所以数据库中也不应该有 info 这个字段
-
 8. **@Temporal** ：向数据库**映射日期（Date）属性时用来调整映射的精度**。Date 类型的数据有 DATE, TIME, 和 TIMESTAMP 三种精度(即单纯的日期,时间,或者两者兼备).
 
    Birth 属性应该使用 DATE 类型(生日只具体到日即可，如：2015-10-22)，而 CreateTime 应该使用 TIMESTAMP 类型(创建时间应该具体到秒，如：2017-10-11 22:39:13)
