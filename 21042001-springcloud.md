@@ -10,5 +10,4 @@ priority: 6
 
 # 参考文档：
 
-1. <https://top234.top/doc/尚硅谷SpringCloud第2季2020.3.2.html>
-
+1. [尚硅谷SpringCloud第2季2020.3.2思维导图](/doc/SGG-SpringCloud-S2-2020.3.2.html)
