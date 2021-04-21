@@ -1,4 +1,4 @@
-<!--title: Spring Cloud 基础
+<!--title: Spring Cloud
 description: Spring Cloud
 type: 笔记
 firstPicture: http://static-blog.top234.top/image/1.png
