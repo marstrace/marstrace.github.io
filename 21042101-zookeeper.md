@@ -11,3 +11,11 @@ priority: 6
 # 参考文档：
 
 1. [尚硅谷大数据之Zookeeper	](/pdf/zookeeper.pdf)
+
+
+
+-----------
+
+参考资料：
+
+1. https://www.bilibili.com/video/BV1PW411r7iP
