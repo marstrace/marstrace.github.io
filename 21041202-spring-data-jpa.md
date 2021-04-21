@@ -1,7 +1,7 @@
 <!--title: Spring Data Jpa
 description: Spring Data JPA 是 Spring 基于 ORM 框架、JPA 规范的基础上封装的一套JPA应用框架，可使开发者用极简的代码即可实现对数据库的访问和操作。它提供了包括增删改查等在内的常用功能，且易于扩展！学习并使用 Spring Data JPA 可以极大提高开发效率！
 type: 笔记
-firstPicture: http://static-blog.top234.top/image/1.png
+firstPicture: /img/1.png
 status: 1
 priority: 6
 =top234=-->
@@ -32,8 +32,8 @@ Spring Data JPA 是 Spring 提供的一套对JPA操作更加高级的封装，�
 
 # 二、参考文档
 
-## 2.1 [Jpa](https://top234.top/pdf/SpringDataJpa/SpringDataJPA-1.pdf)
+## 2.1 [Jpa](/pdf/SpringDataJpa/SpringDataJPA-1.pdf)
 
-## 2.2 [SpringDataJpa 基础](https://top234.top/pdf/SpringDataJpa/SpringDataJPA-2.pdf)
+## 2.2 [SpringDataJpa 基础](/pdf/SpringDataJpa/SpringDataJPA-2.pdf)
 
-## 2.3 [SpringDataJpa 进阶](https://top234.top/pdf/SpringDataJpa/SpringDataJPA-3.pdf)
+## 2.3 [SpringDataJpa 进阶](/pdf/SpringDataJpa/SpringDataJPA-3.pdf)
