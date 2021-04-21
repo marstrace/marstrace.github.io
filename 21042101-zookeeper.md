@@ -18,4 +18,4 @@ priority: 6
 
 参考资料：
 
-1. https://www.bilibili.com/video/BV1PW411r7iP
+1. <https://www.bilibili.com/video/BV1PW411r7iP>
