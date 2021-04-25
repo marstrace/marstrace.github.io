@@ -138,7 +138,7 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 }
 ```
 
-3. 创建配置类,设置使用哪个UserDetailsService实现类及密码的加密方式
+3. 创建配置类，设置使用哪个UserDetailsService实现类及密码的加密方式
 
 ```java
 @Configuration
@@ -266,7 +266,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### 3.2 权限控制 - 设置请求路径权限
 
-1. 修改SecurityConfig配置类,配置自定义请求权限规则
+1. 修改SecurityConfig配置类，配置自定义请求权限规则
 
 ```java
 @Configuration

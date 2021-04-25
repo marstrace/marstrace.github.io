@@ -32,8 +32,8 @@ Spring Data JPA 是 Spring 提供的一套对JPA操作更加高级的封装，�
 
 # 二、参考文档
 
-## 2.1 [Jpa](/pdf/SpringDataJpa/SpringDataJPA-1.pdf)
+1. [Jpa](/pdf/SpringDataJpa/SpringDataJPA-1.pdf)
 
-## 2.2 [SpringDataJpa 基础](/pdf/SpringDataJpa/SpringDataJPA-2.pdf)
+2. [SpringDataJpa 基础](/pdf/SpringDataJpa/SpringDataJPA-2.pdf)
 
-## 2.3 [SpringDataJpa 进阶](/pdf/SpringDataJpa/SpringDataJPA-3.pdf)
+3. [SpringDataJpa 进阶](/pdf/SpringDataJpa/SpringDataJPA-3.pdf)
